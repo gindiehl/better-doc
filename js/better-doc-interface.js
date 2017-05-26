@@ -2,7 +2,7 @@ var Doctor = require('./../js/better-doc.js').doctorModule;
 
 var displayDoctors = function(response) {
   response.data.forEach(function(doctor) {
-    $('.showDocs').append(`<li>Doctor: ${doctor.practices[0].name}</li>`);
+    $('.showDocs').append(`<li>Doctor: ${doctor.practices[0].name}</li><li>Specialty: ${doctor.specialties[0].actor}</li><br>`);
 
   });
 };
