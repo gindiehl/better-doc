@@ -1,6 +1,6 @@
 # Better Doctor
 
-This web application is used to connect patients to doctors in their cities.
+This web application connects patients to doctors in their cities.
 
 ### Requires
 
@@ -93,6 +93,10 @@ localhost:3000
 * Bower
 * ES6
 * Better Doctor API
+
+## Known Bugs
+
+* Program returns doctors by location but not by symptom-match
 
 ## Support and contact details
 
