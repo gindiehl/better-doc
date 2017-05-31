@@ -1,3 +1,4 @@
+// list of dependencies from manifest file (package.json)
 var gulp = require('gulp'),
   browserify = require('browserify'),
   source = require('vinyl-source-stream'),
@@ -34,7 +35,7 @@ gulp.task('serve', function() {
   gulp.watch(['*.html'], ['htmlBuild']);
   gulp.watch(["scss/*.scss"], ['cssBuild']);
 });
-
+// subtasks below depend on earlier tasks to chain, then reload browser
 gulp.task('htmlBuild', function() {
   browserSync.reload();
 });
@@ -58,6 +59,7 @@ gulp.task('bowerCSS', function () {
 });
 
 gulp.task('bowerJS', function () {
+  //pull in all the JS files and output one concatenated, minified file called vendor.js for the HTML to read
   return gulp.src(lib.ext('js').files)
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
@@ -113,5 +115,3 @@ gulp.task('cssBuild', function() {
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
-
-

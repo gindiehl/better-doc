@@ -96,7 +96,7 @@ localhost:3000
 
 ## Known Bugs
 
-* Program returns doctors by location but not by symptom-match
+* None
 
 ## Support and contact details
 

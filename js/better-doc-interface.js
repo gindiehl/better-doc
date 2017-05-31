@@ -11,6 +11,6 @@ $(document).ready(function() {
     var currentDoctorObject = new Doctor();
     var city = $("#city").val();
     var symptom = $("#symptom").val();
-    currentDoctorObject.getDoctor(city, symptom, displayDoctors);
+    currentDoctorObject.getDoctor(symptom, city, displayDoctors);
   });
 });
